@@ -44,5 +44,10 @@ A data file will be provided alongside this test. The dataset is a CSV which con
 
 
 ## **Test Evidence**
+
+*[#01] - Test if data loads from csv file.
+I used a for loop and print operation to check the csv data had loaded into `data` ![image](testing-images/data-loaded.png)
+
+
 [Back to Top](#table-of-contents)
 <a></a>
