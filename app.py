@@ -70,6 +70,14 @@ def calc_rent(data):
     return total
 
 
+def count_masts(data):
+    tenants = [row[0] for row in data ]
+    
+    count = [[name, tenants.count(name)] for name in set(tenants)]
+    return count
+    # print(tenants)
+
+
 def main():
     
     mast_data_list, headings = load_data()
@@ -81,12 +89,17 @@ def main():
     # print("This are the first 5 items from the sorted list:")
     # print(sorted_list[:5])
 
-    lease_list = leased_years(mast_data_list) 
-    print("\nThis is a list of all the items for the above number of lease years")
-    print(lease_list)
+    # lease_list = leased_years(mast_data_list) 
+    # print("\nThis is a list of all the items for the above number of lease years")
+    # print(lease_list)
 
-    total_rent = calc_rent(lease_list)
-    print(f"\nThe total rent for these items is: £{total_rent:.2f}")
+    # total_rent = calc_rent(lease_list)
+    # print(f"\nThe total rent for these items is: £{total_rent:.2f}")
+
+    mast_counts = count_masts(mast_data_list)
+    print("\nThese are the number of masts for each tenant")
+    for count in mast_counts:
+        print(count[0] + 'has ' + str(count[1]) + ' masts.')
 
     
 

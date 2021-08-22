@@ -58,7 +58,9 @@ I realised when I initially sorted the data by `Current Rent` the sort was incor
 The user is asked to enter the lease year term. In this image the term was 25 years.
 ![image](testing-images/lease-years-25.png)
 
-* [#05] - As a user I want ta dictionary containing the tenant name and a count of masts for each tenant output to the console in a readable form.
+### The numebr of masts for each tenant
+![image](testing-images/num-masts.png)
+
 * [#06] - As a user I want a list of retals with `Lease Start Date` between 1 June 1999 abd 31 August 2007 with the date formated as DD/MM/YYYY.
 
 
