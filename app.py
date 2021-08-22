@@ -1,6 +1,7 @@
 import csv
 from datetime import datetime
 
+
 def load_data():
     """
     Load the csv data into a list with fields as correct type
@@ -33,33 +34,62 @@ def load_data():
     print(mast_data)
     return(mast_data, header)
 
+
 def sort_data(data, header):
-    print('The field headings are:')
+    """
+    Sort list data by requested column
+    """
+    print('\nThe field headings are:')
 
     for h in header:
         print(h)
-        
-    sort_by = input("Enter the heading you wish to sort by here: ")
+
+    sort_by = input("\nEnter the heading you wish to sort by here: ")
     
     i = header.index(sort_by)
     data.sort(key=lambda x:x[i])
     return data
 
-def get_sort_criteria(header):
+def leased_years(data):
+    """
+    Select list data for specific lease length
+    """
+    term = input("\nEnter the number of lease years: ")
+    lease_data = [row for row in data if row[9] == int(term)]
+    return 
     
-    
-    return header(sort_by)
+def calc_rent(data):
+    """
+    Calculate the total rent for all list data for  
+    specfic lease length
+    """
+    total=0
+    for row in data:
+        total += float(row[10])
+
+    return total
+
 
 def main():
     
     mast_data_list, headings = load_data()
 
-    print("This is the first 5 items from the csv file after loading into a list:")
-    print(mast_data_list[:5])
+    # print("\nThis is the first 5 items from the csv file after loading into a list:")
+    # print(mast_data_list[:5])
     
-    sorted_list = sort_data(mast_data_list, headings)
-    print("This are the first 5 items from the sorted list:")
-    print(sorted_list[:5])
+    # sorted_list = sort_data(mast_data_list, headings)
+    # print("This are the first 5 items from the sorted list:")
+    # print(sorted_list[:5])
+
+    lease_list = leased_years(mast_data_list) 
+    print("\nThis is a list of all the items for the above number of lease years")
+    print(lease_list)
+
+    total_rent = calc_rent(lease_list)
+    print(f"\nThe total rent for these items is: £{total_rent:.2f}")
+
+    
+
 
 
 main()

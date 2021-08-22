@@ -45,18 +45,19 @@ A data file will be provided alongside this test. The dataset is a CSV which con
 
 ## **Test Evidence**
 
-* [#01] - Test if data loads from csv file.
+### Test if data loads from csv file.
 I used a for loop and print operation to check the csv data had loaded into `data` ![image](testing-images/data-loaded.png)
 
-* [#02] - First 5 items of csv after loading into Python list.
+### First 5 items of csv after loading into Python list.
 I realised when I initially sorted the data by `Current Rent` the sort was incorrect. This was because I had not converted the data into correct data types. `Current Rent` was initially a string from the csv.  This image shows the data elements have the correct data types ![image](testing-images/first-5-unsorted.png)
 
-* [#03] - First 5 items after data is sorted by `Current Rent`.
+### First 5 items after data is sorted by `Current Rent`. 
+![image](testing-images/first-5-unsorted.png)
 
+### Records `Lease Years` = 25 and total rent for these records
+The user is asked to enter the lease year term. In this image the term was 25 years.
+![image](testing-images/lease-years-25.png)
 
-* [#02] - As a user I want a list of the first 5 items of the mast list data in #01 output to the console.
-* [#03] - As a user I want a list of the mast data where the `Lease Years` = 25 containing all data fields.
-* [#04] - As a user I want the total rent for all items in the mast data list in #03 to be output to the console.
 * [#05] - As a user I want ta dictionary containing the tenant name and a count of masts for each tenant output to the console in a readable form.
 * [#06] - As a user I want a list of retals with `Lease Start Date` between 1 June 1999 abd 31 August 2007 with the date formated as DD/MM/YYYY.
 
