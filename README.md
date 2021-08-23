@@ -59,9 +59,11 @@ The user is asked to enter the lease year term. In this image the term was 25 ye
 ![image](testing-images/lease-years-25.png)
 
 ### The numebr of masts for each tenant
+
 ![image](testing-images/num-masts.png)
 
-* [#06] - As a user I want a list of retals with `Lease Start Date` between 1 June 1999 abd 31 August 2007 with the date formated as DD/MM/YYYY.
+### Tenants with lease start date within a date range
+![image](testing-images/tenants-in-date-range.png)
 
 
 [Back to Top](#table-of-contents)
